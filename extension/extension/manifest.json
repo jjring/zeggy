@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "PlugBot",
+  "version": "1.0.0",
+  "description": "This will run code for the Plug.dj bot.",
+  "content_scripts": [
+    {
+      "matches": ["http://plug.dj/*"],
+      "js": ["jquery-1.8.3.min.js","background.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
