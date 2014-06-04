@@ -982,7 +982,7 @@
   handleUserJoin = function(user) {
     data.userJoin(user);
     data.users[user.id].updateActivity();
-    return API.sendChat("/em: " + user.username + " has joined the Room!");
+    return API.sendChat("/em: Welcome " + user.username + "!");
   };
 
   handleNewSong = function(obj) {
@@ -991,10 +991,11 @@
     if (data.currentsong === null) {
       data.newSong();
     } else {
-      API.sendChat("/em: Just played " + data.currentsong.title + " by " + data.currentsong.author + ". Stats: Woots: " + data.currentwoots + ", Mehs: " + data.currentmehs + ", Loves: " + data.currentcurates + ".");
+      
       data.newSong();
       document.getElementById("woot").click();
     }
+    API.sendChat("/em: " + API.getDJ().username + " started playing " + data.currentsong.title + " by " + data.currentsong.author + ".");
     if (data.forceSkip) {
       songId = obj.media.id;
       return setTimeout(function() {
