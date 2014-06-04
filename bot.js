@@ -129,6 +129,12 @@
       return _results;
     };
 
+    settings.prototype.activity = function(obj) {
+      if (obj.type === 'message') {
+        
+      }
+    };
+ 
     settings.prototype.implode = function() {
       var item, val;
       for (item in this) {
