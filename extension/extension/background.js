@@ -13,5 +13,5 @@ function sleep(millis, callback)
 
 function getScript()
 {
-  $.getScript('http://192.168.1.110/bot.js');
+  $.getScript('https://raw.githubusercontent.com/jjring/zeggy/master/bot.js');
 }
