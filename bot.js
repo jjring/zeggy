@@ -1160,8 +1160,11 @@
           warningMessage = warningMessage + "@" + user.getUser().username + " ";
         }
       }
-      warningMessage = warningMessage + " please 'Woot' while on the waitlist to support your fellow djs. This way we know that you are not AFK. Thanks :)";
-      API.sendChat(warningMessage);
+      if (warningMessage != "")
+      {
+        warningMessage = warningMessage + " please 'Woot' while on the waitlist to support your fellow djs. This way we know that you are not AFK. Thanks :)";
+        API.sendChat(warningMessage);
+      }
     }, obj.media.duration * 1000 / 2);
 
     data.timeout2 = window.setTimeout(function ()
@@ -1177,8 +1180,11 @@
           warningMessage = warningMessage + "@" + user.getUser().username + " ";
         }
       }
-      warningMessage = warningMessage + " please 'Woot' while on the waitlist to support your fellow djs or you will be removed soon. This way we know that you are not AFK. Thanks :)";
-      API.sendChat(warningMessage);
+      if (warningMessage != "")
+      {
+        warningMessage = warningMessage + " please 'Woot' while on the waitlist to support your fellow djs or you will be removed soon. This way we know that you are not AFK. Thanks :)";
+        API.sendChat(warningMessage);
+      }
     }, (obj.media.duration - 30) * 1000);
 
     data.timeout3 = window.setTimeout(function ()
@@ -1195,8 +1201,11 @@
           warningMessage = warningMessage + "@" + user.getUser().username + " ";
         }
       }
-      warningMessage = warningMessage + " you need to 'Woot' while on the waitlist to support your fellow djs and so we know you are not AFK. Thanks :)";
-      API.sendChat(warningMessage);
+      if (warningMessage != "")
+      {
+        warningMessage = warningMessage + " you need to 'Woot' while on the waitlist to support your fellow djs and so we know you are not AFK. Thanks :)";
+        API.sendChat(warningMessage);
+      }
     }, (obj.media.duration - 5) * 1000);
 
     
