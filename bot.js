@@ -1149,7 +1149,6 @@
 
     data.timeout1 = window.setTimeout(function ()
     {
-      console.log("WARNING 1");
       var warningMessage = "";
       for (id in data.users)
       {
@@ -1169,7 +1168,6 @@
 
     data.timeout2 = window.setTimeout(function ()
     {
-      console.log("WARNING 2");
       var warningMessage = "";
       for (id in data.users)
       {
@@ -1189,7 +1187,6 @@
 
     data.timeout3 = window.setTimeout(function ()
     {
-      console.log("WARNING 3");
       var warningMessage = "";
       for (id in data.users)
       {
