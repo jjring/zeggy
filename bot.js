@@ -1140,9 +1140,12 @@
       data.users[id].woot = 0;
     }
 
-    window.clearTimeout(timeout1);
-    window.clearTimeout(timeout2);
-    window.clearTimeout(timeout3);
+    if (timeout1)
+      window.clearTimeout(timeout1);
+    if (timeout2)
+      window.clearTimeout(timeout2);
+    if (timeout3)
+      window.clearTimeout(timeout3);
 
     timeout1 = window.setTimeout(function ()
     {
