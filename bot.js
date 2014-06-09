@@ -1140,14 +1140,14 @@
       data.users[id].woot = 0;
     }
 
-    if (timeout1)
-      window.clearTimeout(timeout1);
-    if (timeout2)
-      window.clearTimeout(timeout2);
-    if (timeout3)
-      window.clearTimeout(timeout3);
+    if (data.timeout1)
+      window.clearTimeout(data.timeout1);
+    if (data.timeout2)
+      window.clearTimeout(data.timeout2);
+    if (data.timeout3)
+      window.clearTimeout(data.timeout3);
 
-    timeout1 = window.setTimeout(function ()
+    data.timeout1 = window.setTimeout(function ()
     {
       console.log("WARNING 1");
       var warningMessage = "";
@@ -1164,7 +1164,7 @@
       API.sendChat(warningMessage);
     }, obj.media.duration * 1000 / 2);
 
-    timeout2 = window.setTimeout(function ()
+    data.timeout2 = window.setTimeout(function ()
     {
       console.log("WARNING 2");
       var warningMessage = "";
@@ -1181,7 +1181,7 @@
       API.sendChat(warningMessage);
     }, (obj.media.duration - 30) * 1000);
 
-    timeout3 = window.setTimeout(function ()
+    data.timeout3 = window.setTimeout(function ()
     {
       console.log("WARNING 3");
       var warningMessage = "";
