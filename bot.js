@@ -314,7 +314,7 @@
       now = new Date();
       lastActivity = user.getLastActivity();
       timeSinceLastActivity = now.getTime() - lastActivity.getTime();
-      if (timeSinceLastActivity > data.afkTime && data.currentsong.duration > 12) {
+      if (timeSinceLastActivity > data.afkTime && data.currentsong.duration < 12) {
         if (user.getIsDj()) {
           secsLastActive = timeSinceLastActivity / 1000;
           if (user.getWarningCount() === 0) {
