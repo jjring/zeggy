@@ -519,25 +519,29 @@
 
     Command.prototype.hasPrivelege = function ()
 {
-      var user;
-      user = data.users[this.msgData.fromID].getUser();
-      switch (this.rankPrivelege)
-{
-        case 'host':
-          return user.permission === 5;
-        case 'cohost':
-          return user.permission >= 4;
-        case 'mod':
-          return user.permission >= 3;
-        case 'manager':
-          return user.permission >= 3;
-        case 'bouncer':
-          return user.permission >= 2;
-        case 'featured':
-          return user.permission >= 1;
-        default:
-          return true;
+      var user = data.users[this.msgData.fromID];
+      if (user)
+      {
+        user.getUser();
+        switch (this.rankPrivelege)
+        {
+          case 'host':
+            return user.permission === 5;
+          case 'cohost':
+            return user.permission >= 4;
+          case 'mod':
+            return user.permission >= 3;
+          case 'manager':
+            return user.permission >= 3;
+          case 'bouncer':
+            return user.permission >= 2;
+          case 'featured':
+            return user.permission >= 1;
+          default:
+            return true;
+        }
       }
+      
     };
 
     Command.prototype.commandMatch = function ()
