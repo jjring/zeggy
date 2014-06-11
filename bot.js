@@ -784,6 +784,8 @@
       msg = "5) The pop cutoff is 1979. No 80s electronica/synth/dance pop allowed.";
       API.sendChat(msg);
       msg = "6) Just because you grew up in the 90s doesn't make all music from the 80s Classic. Classic Rock was made from the 50s through the 70s with some albums in the 80s.";
+      API.sendChat(msg);
+      msg = "7) No deathcore/hardcore/dubstep - no stupid questions!";
       return API.sendChat(msg);
     };
 
