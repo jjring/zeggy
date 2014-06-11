@@ -1337,7 +1337,9 @@
       }
     }
     data.userDisconnectLog.push(disconnectStats);
-    return data.users[user.id].inRoom(false);
+    var user = data.users[user.id];
+    if (user)
+      return user.inRoom(false);
   };
 
   antispam = function (chat)
