@@ -1299,10 +1299,14 @@
   };
 
   handleVote = function (obj)
-{
-    data.users[obj.user.id].updateActivity();
-    data.users[obj.user.id].woot = 1;
-    return data.users[obj.user.id].updateVote(obj.vote);
+  {
+    var user = data.users[obj.user.id];
+    if (user)
+    {
+      user.updateActivity();
+      user.woot = 1;
+      return user.updateVote(obj.vote);
+    }
   };
 
   handleUserLeave = function (user)
