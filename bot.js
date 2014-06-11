@@ -519,29 +519,25 @@
 
     Command.prototype.hasPrivelege = function ()
 {
-      var user = data.users[this.msgData.fromID];
-      if (user)
-      {
-        user.getUser();
-        switch (this.rankPrivelege)
-        {
-          case 'host':
-            return user.permission === 5;
-          case 'cohost':
-            return user.permission >= 4;
-          case 'mod':
-            return user.permission >= 3;
-          case 'manager':
-            return user.permission >= 3;
-          case 'bouncer':
-            return user.permission >= 2;
-          case 'featured':
-            return user.permission >= 1;
-          default:
-            return true;
-        }
+      var user;
+      user = data.users[this.msgData.fromID].getUser();
+      switch (this.rankPrivelege)
+{
+        case 'host':
+          return user.permission === 5;
+        case 'cohost':
+          return user.permission >= 4;
+        case 'mod':
+          return user.permission >= 3;
+        case 'manager':
+          return user.permission >= 3;
+        case 'bouncer':
+          return user.permission >= 2;
+        case 'featured':
+          return user.permission >= 1;
+        default:
+          return true;
       }
-      
     };
 
     Command.prototype.commandMatch = function ()
@@ -1303,14 +1299,10 @@
   };
 
   handleVote = function (obj)
-  {
-    var user = data.users[obj.user.id];
-    if (user)
-    {
-      user.updateActivity();
-      user.woot = 1;
-      return user.updateVote(obj.vote);
-    }
+{
+    data.users[obj.user.id].updateActivity();
+    data.users[obj.user.id].woot = 1;
+    return data.users[obj.user.id].updateVote(obj.vote);
   };
 
   handleUserLeave = function (user)
@@ -1337,9 +1329,7 @@
       }
     }
     data.userDisconnectLog.push(disconnectStats);
-    var user = data.users[user.id];
-    if (user)
-      return user.inRoom(false);
+    return data.users[user.id].inRoom(false);
   };
 
   antispam = function (chat)
