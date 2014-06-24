@@ -520,6 +520,10 @@
     Command.prototype.hasPrivelege = function ()
 {
       var user;
+      if (!data.users[this.msgData.fromID])
+      {
+        initialize();
+      }
       user = data.users[this.msgData.fromID].getUser();
       switch (this.rankPrivelege)
 {
