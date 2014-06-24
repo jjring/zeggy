@@ -1302,6 +1302,10 @@
 
   handleVote = function (obj)
 {
+    if (!data.users[obj.user.id])
+    {
+      initialize();
+    }
     data.users[obj.user.id].updateActivity();
     data.users[obj.user.id].woot = 1;
     return data.users[obj.user.id].updateVote(obj.vote);
