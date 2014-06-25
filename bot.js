@@ -1339,7 +1339,14 @@
       }
     }
     data.userDisconnectLog.push(disconnectStats);
+    if (!data.users[user.id])
+      {
+        initialize();
+      }
+      else
+      {
     return data.users[user.id].inRoom(false);
+      }
   };
 
   antispam = function (chat)
