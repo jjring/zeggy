@@ -12,6 +12,8 @@
   script.type = 'text/javascript';
   document.getElementsByTagName('head')[0].appendChild(script);
 
+  var initiated = false; 
+
   settings = (function ()
 {
     function settings()
@@ -362,10 +364,14 @@
 {
     populateUserData();
     initEnvironment();
-    initHooks();
     data.startup();
     data.newSong();
-    return data.startAfkInterval();
+    if (!initiated)
+    {
+      initHooks();
+    }
+    initiated = true;
+    return;
   };
 
   afkCheck = function ()
