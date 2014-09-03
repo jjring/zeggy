@@ -1202,7 +1202,7 @@
 {
     data.userJoin(user);
     data.users[user.id].updateActivity();
-    return API.sendChat("Welcome " + user.username + "!");
+    return API.sendChat("/me Welcome " + user.username + "!");
   };
 
   handleNewSong = function (obj)
@@ -1218,7 +1218,7 @@
       data.newSong();
       document.getElementById("woot").click();
     }
-    API.sendChat(API.getDJ().username + " started playing " + data.currentsong.title + " by " + data.currentsong.author + ".");
+    API.sendChat("/me " + API.getDJ().username + " started playing " + data.currentsong.title + " by " + data.currentsong.author + ".");
 
 
 
