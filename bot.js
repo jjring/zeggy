@@ -1202,7 +1202,7 @@
 {
     data.userJoin(user);
     data.users[user.id].updateActivity();
-    return API.sendChat("/em: Welcome " + user.username + "!");
+    return API.sendChat("Welcome " + user.username + "!");
   };
 
   handleNewSong = function (obj)
