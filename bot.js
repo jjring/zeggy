@@ -1317,6 +1317,7 @@
     {
       initialize();
     }
+    console.log(obj);
     data.users[obj.user.id].updateActivity();
     data.users[obj.user.id].woot = 1;
     return data.users[obj.user.id].updateVote(obj.vote);
