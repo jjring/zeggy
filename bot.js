@@ -1218,9 +1218,7 @@
       data.newSong();
       document.getElementById("woot").click();
     }
-    console.log("handleNewSong");
-  console.log(obj);
-  console.log(data);
+
     API.sendChat("/me " + API.getDJ().username + " started playing " + data.currentsong.title + " by " + data.currentsong.author + ".");
 
 
@@ -1411,13 +1409,13 @@
 
   apiHooks = [
     {
-      'event': API.ROOM_SCORE_UPDATE,
+      'event': API.SCORE_UPDATE,
       'callback': updateVotes
     }, {
       'event': API.USER_JOIN,
       'callback': handleUserJoin
     }, {
-      'event': API.DJ_ADVANCE,
+      'event': API.ADVANCE,
       'callback': handleNewSong
     }, {
       'event': API.VOTE_UPDATE,
