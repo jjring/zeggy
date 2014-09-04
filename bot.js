@@ -1317,7 +1317,10 @@
     {
       initialize();
     }
-    console.log(obj);
+    if (obj.vote == -1)
+    {
+      API.sendChat("@" + obj.user.username + " we do not 'meh' in this room. If you don't like a song, simply refrain from voting or maybe find a different room that will fit your needs.");
+    }
     data.users[obj.user.id].updateActivity();
     data.users[obj.user.id].woot = 1;
     return data.users[obj.user.id].updateVote(obj.vote);
