@@ -1207,17 +1207,20 @@
 
   handleNewSong = function (obj)
 {
+  
     var songId;
     data.intervalMessages();
     if (data.currentsong === null)
-{
+    {
       data.newSong();
     } else
-{
-
+    {
       data.newSong();
       document.getElementById("woot").click();
     }
+    console.log("handleNewSong");
+  console.log(obj);
+  console.log(data);
     API.sendChat("/me " + API.getDJ().username + " started playing " + data.currentsong.title + " by " + data.currentsong.author + ".");
 
 
