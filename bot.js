@@ -528,7 +528,7 @@
       var user;
       if (!data.users[this.msgData.fromID])
       {
-        initialize();
+        //initialize();
       }
       user = data.users[this.msgData.fromID].getUser();
       switch (this.rankPrivelege)
