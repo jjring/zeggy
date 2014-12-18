@@ -1202,7 +1202,7 @@
 {
     data.userJoin(user);
     data.users[user.id].updateActivity();
-    return API.sendChat("/me Welcome " + user.username + "!");
+    return API.sendChat("/me :large_blue_circle:Welcome " + user.username + "!:large_blue_circle:");
   };
 
   handleNewSong = function (obj)
