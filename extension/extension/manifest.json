@@ -6,7 +6,7 @@
   "description": "This will run code for the Plug.dj bot.",
   "content_scripts": [
     {
-      "matches": ["http://plug.dj/*"],
+      "matches": ["http://plug.dj/*","https://plug.dj/*"],
       "js": ["jquery-1.8.3.min.js","background.js"],
       "run_at": "document_idle"
     }
