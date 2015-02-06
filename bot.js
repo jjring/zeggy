@@ -680,7 +680,7 @@
 
     wikiCommand.prototype.functionality = function ()
     {
-      //An approch to getting the summary / leading paragraphs / section 0 out of Wikipedia articlies within the browser using JSONP with the Wikipedia API: http://en.wikipedia.org/w/api.php
+      //An approch to getting the summary / leading paragraphs / section 0 out of Wikipedia articlies within the browser using JSONP with the Wikipedia API: https://en.wikipedia.org/w/api.php
 
       var query = this.msgData.message;
       var title = query.replace("!wiki ", "");
