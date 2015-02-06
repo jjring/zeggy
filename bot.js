@@ -848,7 +848,9 @@
 
     warningCommand.prototype.functionality = function ()
 {
-      setTimeout(API.sendChat("1) If you don't play classic rock according to the room description, your song will be skipped.      2) If you don't know why your song was skipped, ask why.      3) If you continue to not play classic rock, you will be banned. It is safe to play anything from this list: http://bit.ly/Lkjb4R"), 1);
+      setTimeout(API.sendChat("1) If you don't play classic rock according to the room description, your song will be skipped."), 1);
+      setTimeout(API.sendChat("2) If you don't know why your song was skipped, ask why."), 600);
+      setTimeout(API.sendChat("3) If you continue to not play classic rock, you will be banned. It is safe to play anything from this list: http://bit.ly/Lkjb4R"), 1200);
       
       return;
     };
