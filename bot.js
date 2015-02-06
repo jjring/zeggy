@@ -779,13 +779,10 @@
 
     rulesCommand.prototype.functionality = function ()
 {
-      setTimeout(function(){API.sendChat("1) No AFK DJing. Woot all songs when in the Wait List.");}, 0);
-      setTimeout(function(){API.sendChat("2) No Meh-ing or down voting.");}, 200);
-      setTimeout(function(){API.sendChat("3) 8 minute song limit. Full album plays allowed if the room is slow, there are few DJs or at the moderators discretion. (Ask if you want to play a longer song)");}, 400);
-      setTimeout(function(){API.sendChat("4) NO 90s! We play music from the 50s through the 70s in the Classic Rock/Pop/Funk/Oldies genre. Use this list as an idea:  http://bit.ly/Lkjb4R");}, 600);
-      setTimeout(function(){API.sendChat("5) The pop cutoff is 1979. No 80s electronica/synth/dance pop allowed.");}, 800);
-      setTimeout(function(){API.sendChat("6) Just because you grew up in the 90s doesn't make all music from the 80s Classic. Classic Rock was made from the 50s through the 70s with some albums in the 80s.");}, 1000);
-      setTimeout(function(){API.sendChat("7) No deathcore/hardcore/dubstep - no stupid questions!");}, 1200);
+      setTimeout(function(){API.sendChat("1) No AFK DJing. Woot all songs when in the Wait List. No Meh-ing or down voting.");}, 0);
+      setTimeout(function(){API.sendChat("2) NO 90s! We play music from the 50s through the 70s in the Classic Rock/Pop/Funk/Oldies genre. Use this list as an idea:  http://bit.ly/Lkjb4R . The pop cutoff is 1979. No 80s electronica/synth/dance pop allowed.");}, 600);
+      setTimeout(function(){API.sendChat("3) Just because you grew up in the 90s doesn't make all music from the 80s Classic. Classic Rock was made from the 50s through the 70s with some albums in the 80s.");}, 1000);
+      setTimeout(function(){API.sendChat("4) No deathcore/hardcore/dubstep - no stupid questions!");}, 1200);
       
       return;
     };
