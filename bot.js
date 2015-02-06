@@ -530,6 +530,7 @@
       {
         initialize();
       }
+      console.log(data.users);
       user = data.users[this.msgData.fromID].getUser();
       switch (this.rankPrivelege)
 {
