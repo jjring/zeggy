@@ -525,27 +525,23 @@
 
     Command.prototype.hasPrivelege = function ()
 {
-      var user;
-      if (!data.users[this.msgData.fromID])
-      {
-        initialize();
-      }
-      console.log(data.users);
-      user = data.users[this.msgData.fromID].getUser();
+      var user = API.getUser(this.msgData.fromID);
+      
+      
       switch (this.rankPrivelege)
 {
         case 'host':
-          return user.permission === 5;
+          return user.role === 5;
         case 'cohost':
-          return user.permission >= 4;
+          return user.role >= 4;
         case 'mod':
-          return user.permission >= 3;
+          return user.role >= 3;
         case 'manager':
-          return user.permission >= 3;
+          return user.role >= 3;
         case 'bouncer':
-          return user.permission >= 2;
+          return user.role >= 2;
         case 'featured':
-          return user.permission >= 1;
+          return user.role >= 1;
         default:
           return true;
       }
