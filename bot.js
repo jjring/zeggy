@@ -779,21 +779,15 @@
 
     rulesCommand.prototype.functionality = function ()
 {
-      var msg;
-      msg = "1) No AFK DJing. Woot all songs when in the Wait List.";
-      API.sendChat(msg);
-      msg = "2) No Meh-ing or down voting.";
-      API.sendChat(msg);
-      msg = "3) 8 minute song limit. Full album plays allowed if the room is slow, there are few DJs or at the moderators discretion. (Ask if you want to play a longer song)";
-      API.sendChat(msg);
-      msg = "4) NO 90s! We play music from the 50s through the 70s in the Classic Rock/Pop/Funk/Oldies genre. Use this list as an idea:  http://bit.ly/Lkjb4R";
-      API.sendChat(msg);
-      msg = "5) The pop cutoff is 1979. No 80s electronica/synth/dance pop allowed.";
-      API.sendChat(msg);
-      msg = "6) Just because you grew up in the 90s doesn't make all music from the 80s Classic. Classic Rock was made from the 50s through the 70s with some albums in the 80s.";
-      API.sendChat(msg);
-      msg = "7) No deathcore/hardcore/dubstep - no stupid questions!";
-      return API.sendChat(msg);
+      setTimeout(function(){API.sendChat("1) No AFK DJing. Woot all songs when in the Wait List.");}, 0);
+      setTimeout(function(){API.sendChat("2) No Meh-ing or down voting.");}, 200);
+      setTimeout(function(){API.sendChat("3) 8 minute song limit. Full album plays allowed if the room is slow, there are few DJs or at the moderators discretion. (Ask if you want to play a longer song)");}, 400);
+      setTimeout(function(){API.sendChat("4) NO 90s! We play music from the 50s through the 70s in the Classic Rock/Pop/Funk/Oldies genre. Use this list as an idea:  http://bit.ly/Lkjb4R");}, 600);
+      setTimeout(function(){API.sendChat("5) The pop cutoff is 1979. No 80s electronica/synth/dance pop allowed.");}, 800);
+      setTimeout(function(){API.sendChat("6) Just because you grew up in the 90s doesn't make all music from the 80s Classic. Classic Rock was made from the 50s through the 70s with some albums in the 80s.");}, 1000);
+      setTimeout(function(){API.sendChat("7) No deathcore/hardcore/dubstep - no stupid questions!");}, 1200);
+      
+      return;
     };
 
     return rulesCommand;
@@ -848,9 +842,9 @@
 
     warningCommand.prototype.functionality = function ()
 {
-      setTimeout(function(){API.sendChat("1) If you don't play classic rock according to the room description, your song will be skipped.");}, 1);
-      setTimeout(function(){API.sendChat("2) If you don't know why your song was skipped, ask why.");}, 600);
-      setTimeout(function(){API.sendChat("3) If you continue to not play classic rock, you will be banned. It is safe to play anything from this list: http://bit.ly/Lkjb4R");}, 1200);
+      setTimeout(function(){API.sendChat("1) If you don't play classic rock according to the room description, your song will be skipped.");}, 0);
+      setTimeout(function(){API.sendChat("2) If you don't know why your song was skipped, ask why.");}, 200);
+      setTimeout(function(){API.sendChat("3) If you continue to not play classic rock, you will be banned. It is safe to play anything from this list: http://bit.ly/Lkjb4R");}, 400);
       
       return;
     };
