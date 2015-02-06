@@ -687,7 +687,7 @@
       var titleFinal = title.replace(" ", "_");
 
       //Get Leading paragraphs (section 0)
-      $.getJSON("http://en.wikipedia.org/w/api.php?action=parse&page=" + titleFinal + "&prop=text&section=0&format=json&callback=?", function (data)
+      $.getJSON("https://en.wikipedia.org/w/api.php?action=parse&page=" + titleFinal + "&prop=text&section=0&format=json&callback=?", function (data)
       {
         for (text in data.parse.text)
         {
