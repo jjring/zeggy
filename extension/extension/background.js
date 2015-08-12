@@ -1,7 +1,7 @@
 
 window.onload = function ()
 {
-  sleep(5000, getScript);
+  sleep(15000, getScript);
 }
 
 function sleep(millis, callback)
